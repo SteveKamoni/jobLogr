@@ -1,15 +1,12 @@
-import './App.css'
-
+import React from 'react';
+import './App.css';
+import LandingPage from './pages/landingpage';
 function App() {
-
   return (
     <>
-     <div className="min-h-screen flex items-center justify-center text-xl font-semibold">
-      Job Tracker App
-      {/* Day 29 commit */}
-    </div>
+      <LandingPage />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
