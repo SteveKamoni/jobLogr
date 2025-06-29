@@ -1,0 +1,136 @@
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hero {
+  height: 81.8vh;
+  padding: 80px 24px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-container {
+  width: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.hero-title {
+  font-size: 10rem;
+  font-weight: 700;
+  color: #263238; /* Dark text from your SVG */
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.cl {
+  color: #6c63ff;
+}
+
+.hero-subtitle {
+  font-size: 3.5rem;
+  color: #455a64; /* Secondary text color */
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.primary-button {
+  background-color: #6c63ff; /* Primary purple from your SVG */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: #5a52d6;
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: #6c63ff;
+  border: 2px solid #6c63ff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: rgba(108, 99, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.image {
+  width: 750px;
+  height: auto;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.hero-visual {
+  animation: float 10s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

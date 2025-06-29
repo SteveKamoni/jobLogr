@@ -1,27 +1,23 @@
 import React from 'react';
 import './Hero.css';
-
+import myImage from '../assets/Hero-image.jpg'; // adjust path if needed
 const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-container">
+        <div className="hero-visual">
+            <div className="image-container">
+              <img src={myImage} alt="Hero image" className="image" />
+            </div>
+        </div>
         <div className="hero-content">
-          <h1 className="hero-title">Transform Your Ideas Into Reality</h1>
+          <h1 className="hero-title">Take <span className='cl'>Control</span> of <span className='cl'>Your</span> Job <span className='cl'>Search!</span></h1>
           <p className="hero-subtitle">
-            The complete solution for building modern applications with our powerful platform
+          JobTrackr helps you organize, track, and stay motivated throughout your job-hunting journey — all in one clean, focused dashboard.
           </p>
           <div className="hero-buttons">
             <button className="primary-button">Get Started</button>
             <button className="secondary-button">Learn More</button>
-          </div>
-        </div>
-        
-        <div className="hero-visual">
-          <div className="hero-circle">
-            {/* You can replace this with an image or illustration */}
-            <div className="circle-content">
-              <span className="circle-text">Your App</span>
-            </div>
           </div>
         </div>
       </div>
