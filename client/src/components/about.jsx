@@ -9,7 +9,7 @@ const About = () => {
 
 
         <div className="about-content">
-          <h2 className="section-title">What is JobTrackr?</h2>
+          <h2 className="section-title">What is <span className='cl'>JobTrackr?</span></h2>
           <p className="section-description">
             JobTrackr is your personal command center for managing job applications. Whether you're applying to internships, remote contracts, or full-time roles, JobTrackr helps you stay on top of every opportunity without the chaos of spreadsheets or scattered notes.   
           </p>
