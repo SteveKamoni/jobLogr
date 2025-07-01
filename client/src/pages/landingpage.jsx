@@ -5,6 +5,7 @@ import './landingpage.css'
 import About from '../components/about'
 import WhySection from '../components/why-section'
 import Features from '../components/features'
+import Footer from '../components/footer'
 const LandingPage = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const LandingPage = () => {
     <About/>
     <WhySection/>
     <Features/>
+    <Footer/>
     </>
     
   )
