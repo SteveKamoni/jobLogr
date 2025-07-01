@@ -4,55 +4,40 @@ import './About.css';
 const About = () => {
   return (
     <section className="about-section">
-      {/* First Section - Image Left, Text Right */}
+
       <div className="about-container reverse-layout">
 
 
         <div className="about-content">
-          <h2 className="section-title">Our Story</h2>
+          <h2 className="section-title">What is JobTrackr?</h2>
           <p className="section-description">
-            Founded in 2015, we started with a simple mission: to make technology accessible and 
-            effective for businesses of all sizes. Today, we serve clients across 15 countries 
-            with our innovative solutions.
+            JobTrackr is your personal command center for managing job applications. Whether you're applying to internships, remote contracts, or full-time roles, JobTrackr helps you stay on top of every opportunity without the chaos of spreadsheets or scattered notes.   
           </p>
 
     <div className="two-column-section">
+        
+        <div className="column-right">          
+          <div className="about-section-lower">
         <div className="column-left">
           <div className="image-wrapper">
-            {/* Replace with your actual illustration */}
-            <div className="placeholder-image">Feature Illustration</div>
+            <img src="./src/assets/freepik--Character--inject-69.png" alt="JobTrackr Feature" className="feature-image" />
           </div>
         </div>
-        
-        <div className="column-right">
-          <h3 className="column-title">Why Choose Us</h3>
-          <ul className="benefits-list">
-            <li className="benefit-item">
-              <span className="check-icon">✓</span>
-              <span>10+ years of industry experience</span>
-            </li>
-            <li className="benefit-item">
-              <span className="check-icon">✓</span>
-              <span>24/7 dedicated support team</span>
-            </li>
-            <li className="benefit-item">
-              <span className="check-icon">✓</span>
-              <span>Custom solutions for your business</span>
-            </li>
-            <li className="benefit-item">
-              <span className="check-icon">✓</span>
-              <span>Cutting-edge technology stack</span>
-            </li>
-          </ul>
-          <button className="learn-more-btn">Learn More About Us</button>
+
+          <div className="cr-right">
+            <p className="column-description">
+                You can log each job you apply to, track your progress across different stages (Applied, Interview, Offer, Rejected), and add personalized notes like deadlines, follow-ups, or interview prep. With everything in one place, JobTrackr keeps you focused, motivated, and organized throughout your job-hunting journey.
+            </p>
+          </div>
+          </div>
+          
         </div>
       </div>
         </div>
 
         <div className="about-visual">
           <div className="image-wrapper">
-            {/* Replace with your actual image */}
-            <div className="placeholder-image">Team Illustration</div>
+            <img  src='./src/assets/Why- image.png' alt="Helping-Image" ></img>
           </div>
         </div>
       </div>
