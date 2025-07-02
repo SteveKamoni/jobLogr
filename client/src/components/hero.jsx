@@ -1,7 +1,11 @@
 import React from 'react';
 import './Hero.css';
 import myImage from '../assets/Hero-image.jpg'; // adjust path if needed
+import { useNavigate } from 'react-router-dom';
 const Hero = () => {
+
+  const navigate = useNavigate();
+
   return (
     <section className="hero">
       <div className="hero-container">
@@ -16,7 +20,7 @@ const Hero = () => {
           JobTrackr helps you organize, track, and stay motivated throughout your job-hunting journey — all in one clean, focused dashboard.
           </p>
           <div className="hero-buttons">
-            <button className="primary-button">Get Started</button>
+            <button onClick={()=> navigate('./dashboard')} className="primary-button">Get Started</button>
             <button className="secondary-button">Learn More</button>
           </div>
         </div>
