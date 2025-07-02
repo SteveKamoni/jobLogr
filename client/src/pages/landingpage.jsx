@@ -6,6 +6,7 @@ import About from '../components/about'
 import WhySection from '../components/why-section'
 import Features from '../components/features'
 import Footer from '../components/footer'
+import Contact from '../components/contact'
 const LandingPage = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const LandingPage = () => {
     <About/>
     <WhySection/>
     <Features/>
+    <Contact/>
     <Footer/>
     </>
     
