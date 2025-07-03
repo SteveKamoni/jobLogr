@@ -10,6 +10,11 @@
 /* Welcome Section */
 .welcome-section {
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .welcome-section h2 {
@@ -18,8 +23,58 @@
   font-weight: 600;
 }
 
+.welcome-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile-avatar:hover {
+  background-color: #1d4ed8;
+}
+
+.initials {
+  user-select: none;
+}
+
 .online-dot {
   font-size: 1.2rem;
+}
+
+.profile-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-summary img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-summary .name {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  cursor: pointer;
 }
 
 /* -------------------- */
@@ -83,6 +138,137 @@
 }
 
 /* -------------------- */
+/* APPLICATIONS SECTION */
+/* -------------------- */
+.applications-section {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.applications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.applications-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.applications-section-header h3 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.application-filters select {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background-color: #1e293b;
+  color: #ffffff;
+  border: 1px solid #334155;
+  font-size: 0.85rem;
+}
+
+.applications-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.application-card {
+  flex: 0 0 auto;
+  min-width: 280px;
+  scroll-snap-align: start;
+}
+
+.application-card {
+  background-color: #161b22;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.application-card .card-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.application-card h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.application-card .company {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin: 5px 0;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.badge.rejected {
+  background-color: #f8717133;
+  color: #f87171;
+}
+
+.badge.accepted {
+  background-color: #10b98133;
+  color: #10b981;
+}
+
+.badge.pending {
+  background-color: #facc1533;
+  color: #facc15;
+}
+
+.card-right {
+  text-align: right;
+  min-width: 150px;
+}
+
+.card-right .meta {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.card-right .tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.card-right .tag {
+  padding: 4px 10px;
+  background-color: #1f2937;
+  color: #cbd5e1;
+  border-radius: 999px;
+  font-size: 0.7rem;
+}
+
+/* -------------------- */
 /* JOBS SECTION         */
 /* -------------------- */
 .jobs-header {
@@ -107,9 +293,6 @@
   font-size: 0.85rem;
 }
 
-/* -------------------- */
-/* JOB CARD             */
-/* -------------------- */
 .jobs-grid {
   display: grid;
   gap: 20px;
@@ -145,24 +328,6 @@
   font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
-}
-
-.job-badge.recommended {
-  background-color: #10b98133;
-  color: #10b981;
-}
-
-.job-badge.top-company {
-  background-color: #fdcb6e33;
-  color: #fdcb6e;
-}
-
-.job-badge {
-  padding: 4px 10px;
-  border-radius: 9999px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
   display: inline-block;
 }
 
@@ -174,11 +339,6 @@
 .job-badge.top-company {
   background-color: #fdcb6e33;
   color: #fdcb6e;
-}
-
-.job-badge.urgent {
-  background-color: #ef444433;
-  color: #ef4444;
 }
 
 .job-badge.urgent {
@@ -273,108 +433,4 @@
 .pagination .active {
   background-color: #2563eb;
   border-color: #2563eb;
-}
-
-.applications-section {
-  margin-bottom: 40px;
-}
-
-.applications-section h3 {
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-}
-
-.applications-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.application-card {
-  background-color: #161b22;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  color: white;
-}
-
-.application-card .card-top {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.application-card h4 {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.application-card .company {
-  font-size: 0.9rem;
-  color: #9ca3af;
-  margin: 5px 0;
-}
-
-.badge {
-  padding: 4px 10px;
-  border-radius: 8px;
-  font-size: 0.75rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.badge.rejected {
-  background-color: #f8717133;
-  color: #f87171;
-}
-
-.badge.accepted {
-  background-color: #10b98133;
-  color: #10b981;
-}
-
-.badge.pending {
-  background-color: #facc1533;
-  color: #facc15;
-}
-
-.card-right {
-  text-align: right;
-  min-width: 150px;
-}
-
-.card-right .meta {
-  font-size: 0.8rem;
-  color: #9ca3af;
-  margin-bottom: 10px;
-}
-
-.card-right .tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-}
-
-.card-right .tag {
-  padding: 4px 10px;
-  background-color: #1f2937;
-  color: #cbd5e1;
-  border-radius: 999px;
-  font-size: 0.7rem;
-}
-
-.update-btn {
-  padding: 6px 12px;
-  background-color: #2563eb;
-  color: white;
-  font-size: 0.75rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.update-btn:hover {
-  background-color: #1d4ed8;
 }

@@ -62,64 +62,89 @@ function Dashboard() {
     <div className="dashboard-page">
       {/* Welcome Section */}
       <section className="welcome-section">
-        <h2>Welcome back, Steve <span className="online-dot">🟢</span></h2>
+        <div className="welcome-header">
+          <h2>
+            Welcome back, Steve <span className="online-dot">🟢</span>
         <p>Here's a quick look at your job search activity.</p>
+          </h2>
+          <div className="profile-avatar" title="Profile Settings">
+          <span className="initials">SK</span>
+           </div>
 
-<section className="applications-section">
-  <h3>Your Applications</h3>
-  <div className="applications-grid">
-    {[
-      {
-        title: "Data Scientist",
-        company: "Microsoft",
-        status: "Rejected",
-        date: "April 10, 2025",
-        tags: ["Full-time", "Entry-level"],
-      },
-      {
-        title: "Backend Developer",
-        company: "Netflix",
-        status: "Accepted",
-        date: "March 22, 2025",
-        tags: ["Remote", "Senior"],
-      },
-      {
-        title: "Product Manager",
-        company: "Spotify",
-        status: "Pending",
-        date: "April 5, 2025",
-        tags: ["Full-time", "Mid-level"],
-      },
-            {
-        title: "Product Manager",
-        company: "Spotify",
-        status: "Pending",
-        date: "April 5, 2025",
-        tags: ["Full-time", "Mid-level"],
-      }
-    ].map((app, index) => (
-      <div className={`application-card ${app.status.toLowerCase()}`} key={index}>
-        <div className="card-top">
-          <div>
-            <h4>{app.title}</h4>
-            <p className="company">{app.company}</p>
-            <span className={`badge ${app.status.toLowerCase()}`}>{app.status}</span>
-          </div>
-          <div className="card-right">
-            <p className="meta">Applied: {app.date}</p>
-            <div className="tags">
-              {app.tags.map((tag, i) => (
-                <span className="tag" key={i}>{tag}</span>
-              ))}
-            </div>
-            <button className="update-btn">Update Status</button>
-          </div>
         </div>
-      </div>
-    ))}
-  </div>
-</section>
 
+        <section className="applications-section">
+          <div className="applications-header">
+            <h3>Your Applications</h3>
+            <div className="filters">
+              <select>
+                <option>All Status</option>
+                <option>Accepted</option>
+                <option>Rejected</option>
+                <option>Pending</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="applications-grid">
+            {[
+              {
+                title: "Data Scientist",
+                company: "Microsoft",
+                status: "Rejected",
+                date: "April 10, 2025",
+                tags: ["Full-time", "Entry-level"],
+              },
+              {
+                title: "Backend Developer",
+                company: "Netflix",
+                status: "Accepted",
+                date: "March 22, 2025",
+                tags: ["Remote", "Senior"],
+              },
+              {
+                title: "Product Manager",
+                company: "Spotify",
+                status: "Pending",
+                date: "April 5, 2025",
+                tags: ["Full-time", "Mid-level"],
+              },
+              {
+                title: "Product Manager",
+                company: "Spotify",
+                status: "Pending",
+                date: "April 5, 2025",
+                tags: ["Full-time", "Mid-level"],
+              },
+            ].map((app, index) => (
+              <div
+                className={`application-card ${app.status.toLowerCase()}`}
+                key={index}
+              >
+                <div className="card-top">
+                  <div>
+                    <h4>{app.title}</h4>
+                    <p className="company">{app.company}</p>
+                    <span className={`badge ${app.status.toLowerCase()}`}>
+                      {app.status}
+                    </span>
+                  </div>
+                  <div className="card-right">
+                    <p className="meta">Applied: {app.date}</p>
+                    <div className="tags">
+                      {app.tags.map((tag, i) => (
+                        <span className="tag" key={i}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <button className="update-btn">Update Status</button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       </section>
 
       {/* Job Recommendations */}
