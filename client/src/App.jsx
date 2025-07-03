@@ -5,7 +5,7 @@ import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/dashboard';
 import Layout from './components/layout';
 import ApplicationsDashboard from './sections/applications'; // ✅ Import ApplicationsDashboard
-
+import JobListings from './sections/listings';
 function App() {
   return (
     <Routes>
@@ -28,6 +28,15 @@ function App() {
         element={
           <Layout>
             <ApplicationsDashboard />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/listings"
+        element={
+          <Layout>
+            <JobListings />
           </Layout>
         }
       />

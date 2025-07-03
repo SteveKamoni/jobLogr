@@ -22,7 +22,7 @@
 /* Main dashboard content */
 .main-content {
   flex-grow: 1;
-  padding: 20px;
+  /* padding: 20px; */
   transition: margin-left 0.3s ease;
   background-color: #0d1117;
   color: white;

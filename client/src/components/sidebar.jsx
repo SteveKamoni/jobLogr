@@ -35,7 +35,7 @@ function Sidebar({ isCollapsed, setIsCollapsed }) {
             {!isCollapsed && <span>My Applications</span>}
           </NavLink>
 
-          <NavLink to="/jobs" className="nav-item" title="Job Listings">
+          <NavLink to="/listings" className="nav-item" title="Job Listings">
             <i className="fas fa-briefcase"></i>
             {!isCollapsed && <span>Job Listings</span>}
           </NavLink>
