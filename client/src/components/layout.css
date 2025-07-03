@@ -1,0 +1,39 @@
+/* Layout container */
+.layout-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+  background-color: #0d1117;
+}
+
+/* Sidebar styles */
+.sidebar-container {
+  width: 250px;
+  min-height: 100vh;
+  transition: width 0.3s ease;
+  background-color: #161b22;
+}
+
+.sidebar-container.collapsed {
+  width: 80px;
+}
+
+/* Main dashboard content */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+  background-color: #0d1117;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Apply margin based on sidebar state */
+.layout-wrapper.collapsed .main-content {
+  margin-left: 80px;
+}
+
+.layout-wrapper:not(.collapsed) .main-content {
+  margin-left: 250px;
+}

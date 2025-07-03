@@ -1,1 +1,11 @@
 /* Place your CSS styles here. Remove any JavaScript or JSX code from this file. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #0d1117; /* Match dashboard background */
+  color: white;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
