@@ -6,6 +6,8 @@ import Dashboard from './pages/dashboard';
 import Layout from './components/layout';
 import ApplicationsDashboard from './sections/applications'; // ✅ Import ApplicationsDashboard
 import JobListings from './sections/listings';
+import InterviewScheduleDashboard from './sections/interviews';
+import SavedJobsDashboard from './sections/saved';
 function App() {
   return (
     <Routes>
@@ -37,6 +39,23 @@ function App() {
         element={
           <Layout>
             <JobListings />
+          </Layout>
+        }
+      />
+      <Route
+        path="/interviews"
+        element={
+          <Layout>
+            <InterviewScheduleDashboard />
+          </Layout>
+        }
+      />
+      {/* Add more routes as needed */}
+      <Route
+        path="/saved"
+        element={
+          <Layout>
+            <SavedJobsDashboard />
           </Layout>
         }
       />

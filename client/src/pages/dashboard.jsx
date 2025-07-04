@@ -168,7 +168,7 @@ function Dashboard() {
 
         <div className="jobs-grid">
           {jobs.map((job, index) => (
-            <div className="job-card" key={index}>
+            <div className="job-card-dash" key={index}>
               <div className="job-header">
                 <h4>{job.title}</h4>
                 {job.badge && (
