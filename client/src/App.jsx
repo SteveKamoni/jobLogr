@@ -8,7 +8,7 @@ import ApplicationsDashboard from './sections/applications'; // ✅ Import Appli
 import JobListings from './sections/listings';
 import InterviewScheduleDashboard from './sections/interviews';
 import SavedJobsDashboard from './sections/saved';
-import AnalyticsDashboard from './sections/analytics';
+import JobAnalyticsDashboard from './sections/analytics';
 function App() {
   return (
     <Routes>
@@ -65,7 +65,7 @@ function App() {
         path="/analytics"
         element={
           <Layout>
-            <AnalyticsDashboard />
+            <JobAnalyticsDashboard />
           </Layout>
         }
       />

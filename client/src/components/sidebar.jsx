@@ -54,11 +54,6 @@ function Sidebar({ isCollapsed, setIsCollapsed }) {
             <i className="fas fa-chart-bar"></i>
             {!isCollapsed && <span>Analytics</span>}
           </NavLink>
-
-          <NavLink to="/contact" className="nav-item" title="Contact">
-            <i className="fas fa-envelope"></i>
-            {!isCollapsed && <span>Contact</span>}
-          </NavLink>
         </nav>
       </div>
 
