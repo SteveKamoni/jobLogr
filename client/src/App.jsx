@@ -9,6 +9,7 @@ import JobListings from './sections/listings';
 import InterviewScheduleDashboard from './sections/interviews';
 import SavedJobsDashboard from './sections/saved';
 import JobAnalyticsDashboard from './sections/analytics';
+import ProfileDashboard from './sections/profile';
 function App() {
   return (
     <Routes>
@@ -66,6 +67,15 @@ function App() {
         element={
           <Layout>
             <JobAnalyticsDashboard />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/profile"
+        element={
+          <Layout>
+            <ProfileDashboard />
           </Layout>
         }
       />
