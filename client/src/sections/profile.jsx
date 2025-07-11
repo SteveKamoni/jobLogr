@@ -1,5 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import './profile.css';
+import {
+  Moon,
+  Sun,
+  Settings,
+  Camera,
+  Edit2,
+  Clock,
+  Target,
+  CheckCircle,
+  Flame,
+  User,
+  Award,
+  Trophy,
+  Mail,
+  Phone,
+  MapPin,
+  Github,
+  Twitter,
+  Linkedin,
+  Briefcase,
+  Book
+} from 'lucide-react';
+
+
 
 const ProfileDashboard = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -25,9 +49,9 @@ const ProfileDashboard = () => {
         <div className="theme-toggle-container">
           <button id="themeToggle" className="theme-toggle" onClick={toggleTheme}>
             {darkMode ? (
-              <i data-lucide="moon" className="moon-icon"></i>
+              <Moon/>
             ) : (
-              <i data-lucide="sun" className="sun-icon"></i>
+            <Sun/>
             )}
           </button>
         </div>
@@ -42,7 +66,7 @@ const ProfileDashboard = () => {
                   <p>Your personal information</p>
                 </div>
                 <button className="settings-button">
-                  <i data-lucide="settings"></i>
+                  <Settings/>
                 </button>
               </div>
               
@@ -54,7 +78,7 @@ const ProfileDashboard = () => {
                     className="profile-image"
                   />
                   <button className="camera-button">
-                    <i data-lucide="camera"></i>
+                    <Camera/>
                   </button>
                 </div>
                 
@@ -85,7 +109,7 @@ const ProfileDashboard = () => {
                     <h4>1,248</h4>
                   </div>
                   <div className="stat-icon clock">
-                    <i data-lucide="clock"></i>
+                    <Clock/>
                   </div>
                 </div>
               </div>
@@ -97,7 +121,7 @@ const ProfileDashboard = () => {
                     <h4>87%</h4>
                   </div>
                   <div className="stat-icon target">
-                    <i data-lucide="target"></i>
+                    <Target/>
                   </div>
                 </div>
               </div>
@@ -109,7 +133,7 @@ const ProfileDashboard = () => {
                     <h4>324</h4>
                   </div>
                   <div className="stat-icon check">
-                    <i data-lucide="check-circle"></i>
+                    <CheckCircle/>
                   </div>
                 </div>
               </div>
@@ -121,7 +145,7 @@ const ProfileDashboard = () => {
                     <h4>42 days</h4>
                   </div>
                   <div className="stat-icon flame">
-                    <i data-lucide="flame"></i>
+                    <Flame/>
                   </div>
                 </div>
               </div>
@@ -235,11 +259,11 @@ const ProfileDashboard = () => {
                   onClick={() => setActiveTab('personal')}
                 >
                   <span>
-                    <i data-lucide="user"></i>
+                    <User/>
                     <span>Personal Info</span>
                   </span>
                 </button>
-                <button 
+                {/* <button 
                   className={`tab ${activeTab === 'skills' ? 'tab-active' : ''}`}
                   onClick={() => setActiveTab('skills')}
                 >
@@ -247,8 +271,8 @@ const ProfileDashboard = () => {
                     <i data-lucide="award"></i>
                     <span>Skills</span>
                   </span>
-                </button>
-                <button 
+                </button> */}
+                {/* <button 
                   className={`tab ${activeTab === 'achievements' ? 'tab-active' : ''}`}
                   onClick={() => setActiveTab('achievements')}
                 >
@@ -256,8 +280,8 @@ const ProfileDashboard = () => {
                     <i data-lucide="trophy"></i>
                     <span>Achievements</span>
                   </span>
-                </button>
-                <button 
+                </button> */}
+                {/* <button 
                   className={`tab ${activeTab === 'settings' ? 'tab-active' : ''}`}
                   onClick={() => setActiveTab('settings')}
                 >
@@ -265,7 +289,7 @@ const ProfileDashboard = () => {
                     <i data-lucide="settings"></i>
                     <span>Settings</span>
                   </span>
-                </button>
+                </button> */}
               </div>
             </div>
             
@@ -282,15 +306,15 @@ const ProfileDashboard = () => {
                   <h4>CONTACT INFORMATION</h4>
                   <ul className="info-list">
                     <li>
-                      <i data-lucide="mail"></i>
+                      <Mail/>
                       <span>alex.chen@example.com</span>
                     </li>
                     <li>
-                      <i data-lucide="phone"></i>
+                      <Phone/>
                       <span>+1 (555) 123-4567</span>
                     </li>
                     <li>
-                      <i data-lucide="map-pin"></i>
+                      <MapPin/>
                       <span>San Francisco, CA</span>
                     </li>
                   </ul>
@@ -300,15 +324,15 @@ const ProfileDashboard = () => {
                   <h4>SOCIAL LINKS</h4>
                   <ul className="info-list">
                     <li>
-                      <i data-lucide="github"></i>
+                      <Github/>
                       <span>github.com/alexchen</span>
                     </li>
                     <li>
-                      <i data-lucide="twitter"></i>
+                      <Twitter/>
                       <span>twitter.com/alexchen</span>
                     </li>
                     <li>
-                      <i data-lucide="linkedin"></i>
+                      <Linkedin/>
                       <span>linkedin.com/in/alexchen</span>
                     </li>
                   </ul>
@@ -324,7 +348,7 @@ const ProfileDashboard = () => {
                 <div className="experience-item">
                   <div className="experience-icon-container">
                     <div className="experience-icon briefcase">
-                      <i data-lucide="briefcase"></i>
+                      <Briefcase/>
                     </div>
                     <div className="experience-line"></div>
                   </div>
@@ -340,7 +364,7 @@ const ProfileDashboard = () => {
                 <div className="experience-item">
                   <div className="experience-icon-container">
                     <div className="experience-icon briefcase">
-                      <i data-lucide="briefcase"></i>
+                      <Briefcase/>
                     </div>
                     <div className="experience-line"></div>
                   </div>
@@ -356,7 +380,8 @@ const ProfileDashboard = () => {
                 <div className="experience-item">
                   <div className="experience-icon-container">
                     <div className="experience-icon briefcase">
-                      <i data-lucide="briefcase"></i>
+                     <Briefcase/>
+
                     </div>
                   </div>
                   <div className="experience-content">
@@ -371,7 +396,7 @@ const ProfileDashboard = () => {
             </div>
             
             {/* Recent Activity */}
-            <div className="glass-card activity-card">
+            {/* <div className="glass-card activity-card">
               <h3>Recent Activity</h3>
               
               <div className="activity-list">
@@ -411,7 +436,7 @@ const ProfileDashboard = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -373,7 +373,7 @@ function JobAnalyticsDashboard() {
         </div>
         
         {/* Heatmap Section */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm mb-8">
+        {/* <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm mb-8">
           <h3 className="font-semibold text-lg mb-4">Application Heatmap</h3>
           <div className="overflow-x-auto">
             <div className="heatmap-grid inline-block">
@@ -395,7 +395,7 @@ function JobAnalyticsDashboard() {
               <span className="text-xs ml-2">More</span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
