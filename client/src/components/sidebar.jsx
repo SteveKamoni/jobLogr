@@ -64,7 +64,7 @@ function Sidebar({ isCollapsed, setIsCollapsed }) {
           {!isCollapsed && <span>Profile</span>}
         </NavLink>
 
-        <NavLink to="/profile/settings" className="nav-item settings" title="Settings">
+        <NavLink to="/settings" className="nav-item settings" title="Settings">
           <i className="fas fa-cog"></i>
           {!isCollapsed && <span>Settings</span>}
         </NavLink>

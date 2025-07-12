@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react'; // ✅ add useRef here
 import './profile.css';
 import {
   Moon,
@@ -11,8 +11,6 @@ import {
   CheckCircle,
   Flame,
   User,
-  Award,
-  Trophy,
   Mail,
   Phone,
   MapPin,
@@ -20,17 +18,18 @@ import {
   Twitter,
   Linkedin,
   Briefcase,
-  Book
 } from 'lucide-react';
-
-
 
 const ProfileDashboard = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const [activeTab, setActiveTab] = useState('personal');
+  const settingsRef = useRef(null); // ✅ added ref here
 
   useEffect(() => {
-    // Check for saved theme preference or use preferred color scheme
-    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (
+      localStorage.getItem('theme') === 'dark' ||
+      (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
       setDarkMode(true);
     }
   }, []);
@@ -40,7 +39,12 @@ const ProfileDashboard = () => {
     localStorage.setItem('theme', !darkMode ? 'dark' : 'light');
   };
 
-  const [activeTab, setActiveTab] = useState('personal');
+  const scrollToSettings = () => {
+    setActiveTab('settings'); // ✅ change tab first
+    setTimeout(() => {
+      settingsRef.current?.scrollIntoView({ behavior: 'smooth' }); // ✅ scroll once it's visible
+    }, 100);
+  };
 
   return (
     <div className={`profile-dashboard ${darkMode ? 'dark' : ''}`}>
@@ -65,10 +69,12 @@ const ProfileDashboard = () => {
                   <h2>Profile</h2>
                   <p>Your personal information</p>
                 </div>
-                <button className="settings-button">
+                <button onClick={scrollToSettings} className="settings-button">
                   <Settings/>
                 </button>
               </div>
+
+              
               
               <div className="profile-content">
                 <div className="profile-image-container">
@@ -263,6 +269,7 @@ const ProfileDashboard = () => {
                     <span>Personal Info</span>
                   </span>
                 </button>
+
                 {/* <button 
                   className={`tab ${activeTab === 'skills' ? 'tab-active' : ''}`}
                   onClick={() => setActiveTab('skills')}
