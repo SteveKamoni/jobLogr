@@ -1,11 +1,11 @@
 import React from "react";
-import "./Features.css";
+import "./features.css";
 
 const Features = () => {
   return (
     <section className="features-section">
       <div className="features-header">
-        <h1>FEATURES THAT PUT YOU IN CONTROL</h1>
+        <h1>FEATURES <span className="cl">THAT</span> PUT <span className="cl">YOU</span> IN <span className="cl">CONTROL</span></h1>
       </div>
 
       <div className="features-grid">

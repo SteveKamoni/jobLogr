@@ -2,7 +2,7 @@
 .why-section {
   padding: 80px 20px;
   background-color: #fff;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +13,7 @@
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  gap: 60px;
+  gap: 10rem;
 }
 
 /* Left Column */
@@ -26,9 +26,12 @@
 
 .top-container {
   padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.section-title {
+.why-section-title {
   font-size: 5rem;
   font-weight: 700;
   color: #263238;
@@ -48,6 +51,8 @@
   background-color: #f5ebff;
   padding: 0.5rem;
   border-radius: 1rem;
+  padding: 1.5rem;
+  margin-top: 5rem;
 }
 
 .bottom-left {

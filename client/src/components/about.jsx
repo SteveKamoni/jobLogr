@@ -1,5 +1,5 @@
 import React from 'react';
-import './About.css';
+import './about.css';
 
 const About = () => {
   return (
@@ -9,13 +9,12 @@ const About = () => {
 
 
         <div className="about-content">
-          <h2 className="section-title">What is <span className='cl'>JobTrackr?</span></h2>
+          <h2 className="about-section-title">What is <span className='cl'>JobTrackr?</span></h2>
           <p className="section-description">
             JobTrackr is your personal command center for managing job applications. Whether you're applying to internships, remote contracts, or full-time roles, JobTrackr helps you stay on top of every opportunity without the chaos of spreadsheets or scattered notes.   
           </p>
 
     <div className="two-column-section">
-        
         <div className="column-right">          
           <div className="about-section-lower">
         <div className="column-left">

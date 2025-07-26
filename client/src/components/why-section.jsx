@@ -9,7 +9,7 @@ const WhySection = () => {
         <div className="left-column">
           {/* Top Container */}
           <div className="top-container">
-            <h2 className="section-title"> Why <span className='cl'>JobTrackr?</span></h2>
+            <h2 className="why-section-title"> Why <span className='cl'>JobTrackr?</span></h2>
             <p className="why-section-description">
                 Most people manage their job search using messy spreadsheets, scattered notes, or pure memory. That leads to stress, missed deadlines, and confusion.
             </p>

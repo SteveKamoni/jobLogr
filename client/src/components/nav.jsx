@@ -21,22 +21,22 @@ const Navbar = () => {
         {/* Navigation Links */}
         <ul className={isOpen ? 'nav-menu active' : 'nav-menu'}>
           <li className="nav-item">
-            <Link to="/features" className="nav-links" onClick={() => setIsOpen(false)}>
+            <Link to="/features" className="hm-nav-links" onClick={() => setIsOpen(false)}>
               Features
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/solutions" className="nav-links" onClick={() => setIsOpen(false)}>
+            <Link to="/solutions" className="hm-nav-links" onClick={() => setIsOpen(false)}>
               Solutions
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/resources" className="nav-links" onClick={() => setIsOpen(false)}>
+            <Link to="/resources" className="hm-nav-links" onClick={() => setIsOpen(false)}>
               Resources
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/pricing" className="nav-links" onClick={() => setIsOpen(false)}>
+            <Link to="/pricing" className="hm-nav-links" onClick={() => setIsOpen(false)}>
               Pricing
             </Link>
           </li>
