@@ -152,3 +152,9 @@
     margin-left: 0;
   }
 }
+
+.navbar-transparent {
+  background: rgba(255, 255, 255, 0.2);
+  transition: background 0.3s;
+  box-shadow: none;
+}
