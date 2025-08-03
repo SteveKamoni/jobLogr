@@ -16,7 +16,7 @@ import {
   faEdit,
   faEllipsisH
 } from '@fortawesome/free-solid-svg-icons';
-import './Applications.css';
+import './applications.css';
 
 const Applications = () => {
   // Mock data for applications

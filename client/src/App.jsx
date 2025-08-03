@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import LandingPage from './pages/LandingPage';
+import LandingPage from './pages/landingpage';
 import Dashboard from './pages/dashboard';
 import Layout from './components/layout';
-import ApplicationsDashboard from './sections/applications'; // ✅ Import ApplicationsDashboard
+import ApplicationsDashboard from './sections/applications'; 
 import JobListings from './sections/listings';
 import InterviewScheduleDashboard from './sections/interviews';
 import SavedJobsDashboard from './sections/saved';

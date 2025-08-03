@@ -1,22 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './nav.css'; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <nav className= "navbar">
-      <div className={`navbar-container${isScrolled ? 'navbar-transparent' : ""}`} >
+      <div className="navbar-container" >
         {/* Logo */}
         <Link to="/" className="navbar-logo">
           <span className="logo-text">YourLogo</span>
